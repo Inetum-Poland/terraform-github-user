@@ -30,3 +30,8 @@ variable "teams" {
     error_message = "value"
   }
 }
+
+variable "seat_project_code" {
+  type        = string
+  description = "The seat project code"
+}

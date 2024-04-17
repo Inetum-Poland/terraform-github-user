@@ -24,6 +24,7 @@ This module creates a preconfigured GitHub user.
 | Name | Version |
 |------|---------|
 | <a name="provider_github"></a> [github](#provider\_github) | 6.2.1 |
+| <a name="provider_terraform"></a> [terraform](#provider\_terraform) | n/a |
 
 ## Requirements
 
@@ -36,12 +37,14 @@ This module creates a preconfigured GitHub user.
 | Name | Type |
 |------|------|
 | [github_membership.user](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/membership) | resource |
+| [terraform_data.seat_project_code](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/resources/data) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_role"></a> [role](#input\_role) | The role of the user | `string` | `"member"` | no |
+| <a name="input_seat_project_code"></a> [seat\_project\_code](#input\_seat\_project\_code) | The seat project code | `string` | n/a | yes |
 | <a name="input_teams"></a> [teams](#input\_teams) | The teams to add the user to | <pre>list(object({<br>    team = any<br>    role = string<br>  }))</pre> | `[]` | no |
 | <a name="input_username"></a> [username](#input\_username) | The username of the user | `string` | n/a | yes |
 
